@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Luxury Booking</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+            url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7');
+            background-size: cover;
+            background-position: center;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .booking-container{
+            width:550px;
+            padding:40px;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(15px);
+            border-radius:25px;
+            box-shadow:0px 0px 30px rgba(255,215,0,0.5);
+            border:1px solid rgba(255,255,255,0.2);
+        }
+
+        h1{
+            text-align:center;
+            color:gold;
+            margin-bottom:30px;
+            font-size:35px;
+        }
+
+        .input-box{
+            margin-bottom:20px;
+        }
+
+        .input-box input,
+        .input-box select{
+            width:100%;
+            padding:16px;
+            border:none;
+            outline:none;
+            border-radius:12px;
+            background: rgba(255,255,255,0.15);
+            color:white;
+            font-size:16px;
+        }
+
+        .input-box input::placeholder{
+            color:#ddd;
+        }
+
+        select option{
+            color:black;
+        }
+
+        .book-btn{
+            width:100%;
+            padding:18px;
+            background: linear-gradient(45deg,gold,#ffcc00);
+            color:black;
+            font-size:20px;
+            font-weight:bold;
+            border:none;
+            border-radius:12px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .book-btn:hover{
+            transform:scale(1.03);
+            box-shadow:0px 0px 20px gold;
+        }
+
+        .top-text{
+            text-align:center;
+            color:white;
+            margin-bottom:25px;
+            font-size:18px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="booking-container">
+
+    <h1>Royal Ride Booking</h1>
+    <p class="top-text">Travel in Style • Comfort • Luxury</p>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="input-box">
+            <input type="text" name="name" placeholder="👤 Enter Your Name" required>
+        </div>
+
+        <div class="input-box">
+            <input type="text" name="phone" placeholder="📞 Phone Number" required>
+        </div>
+
+        <div class="input-box">
+            <input type="text" name="pickup" placeholder="📍 Pickup Location" required>
+        </div>
+
+        <div class="input-box">
+            <input type="text" name="drop" placeholder="🏁 Drop Location" required>
+        </div>
+
+        <div class="input-box">
+            <input type="number" name="distance" placeholder="🛣 Distance in KM" required>
+        </div>
+
+        <div class="input-box">
+            <select name="car_type">
+                <option>Select Premium Vehicle</option>
+                <option>AC Sedan</option>
+                <option>SUV</option>
+                <option>Innova</option>
+                <option>Luxury Car</option>
+                <option>Tempo Traveller</option>
+            </select>
+        </div>
+
+        <div class="input-box">
+            <input type="date" name="date" required>
+        </div>
+
+       <button type="submit" class="book-btn">
+    Confirm Booking
+</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

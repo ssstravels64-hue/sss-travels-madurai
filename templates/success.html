@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Success</title>
+
+    <style>
+
+        body{
+            background:black;
+            color:white;
+            font-family:Arial;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .box{
+            background:#111;
+            padding:50px;
+            border-radius:20px;
+            box-shadow:0px 0px 30px gold;
+            text-align:center;
+        }
+
+        h1{
+            color:gold;
+            font-size:40px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Booking Confirmed ✅</h1>
+
+    <p>Opening WhatsApp...</p>
+
+</div>
+
+<script>
+
+var msg =
+"NEW BOOKING%0A%0A" +
+
+"Name: {{ request.session.name }}%0A" +
+
+"Phone: {{ request.session.phone }}%0A%0A" +
+
+"Pickup: {{ request.session.pickup }}%0A" +
+
+"Drop: {{ request.session.drop }}%0A%0A" +
+
+"Distance: {{ request.session.distance }} KM%0A" +
+
+"Car: {{ request.session.car_type }}%0A" +
+
+"Date: {{ request.session.date }}";
+
+setTimeout(function(){
+
+window.open(
+"https://wa.me/918122259948?text=" + msg,
+"_blank"
+);
+
+},1000);
+
+</script>
+
+</body>
+</html>

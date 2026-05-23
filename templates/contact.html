@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Contact Us</title>
+
+    <style>
+
+        
+        body{
+    margin:0;
+    padding:0;
+    background:black;
+    font-family:Arial;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    min-height:100vh;
+}
+
+        .bg{
+            position:absolute;
+            width:100%;
+            height:100%;
+            background:
+            radial-gradient(circle at top left,gold,transparent 30%),
+
+            radial-gradient(circle at bottom right,#ffffff55,transparent 30%),
+
+            black;
+
+            animation:bgmove 8s infinite alternate;
+        }
+
+        @keyframes bgmove{
+            100%{
+                filter:hue-rotate(20deg);
+            }
+        }
+
+        .contact-box{
+
+            width:500px;
+
+            padding:50px;
+
+            background:rgba(255,255,255,0.08);
+
+            backdrop-filter:blur(20px);
+
+            border:2px solid gold;
+
+            border-radius:30px;
+
+            position:absolute;
+
+            top:50%;
+            left:50%;
+
+            transform:translate(-50%,-50%);
+
+            text-align:center;
+
+            box-shadow:
+            0px 0px 20px gold,
+            0px 0px 50px #ffffff55;
+
+            animation:popup 1s ease;
+        }
+
+        @keyframes popup{
+
+            from{
+                opacity:0;
+                transform:translate(-50%,-50%) scale(0.5);
+            }
+
+            to{
+                opacity:1;
+                transform:translate(-50%,-50%) scale(1);
+            }
+        }
+
+        h1{
+            color:gold;
+            font-size:50px;
+            margin-bottom:40px;
+
+            text-shadow:
+            0px 0px 10px gold,
+            0px 0px 30px white;
+        }
+
+        .contact-item{
+
+            margin:30px 0;
+
+            padding:20px;
+
+            border-radius:20px;
+
+            background:rgba(255,255,255,0.05);
+
+            transition:0.5s;
+        }
+
+        .contact-item:hover{
+
+            transform:scale(1.05);
+
+            box-shadow:
+            0px 0px 20px gold;
+        }
+
+        a{
+            color:white;
+            text-decoration:none;
+            font-size:28px;
+            font-weight:bold;
+        }
+
+        .icon{
+            font-size:40px;
+            color:gold;
+            margin-bottom:10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="contact-box">
+
+    <h1>Contact Us</h1>
+
+    <div class="contact-item">
+
+        <div class="icon">Whatsapp and Contact📞</div>
+
+        <a href="tel:8122259948">
+            8122259948
+        </a>
+
+    </div>
+
+    <div class="contact-item">
+
+        <div class="icon">WhatsApp and COntact 📞</div>
+
+        <a href="tel:9865488328">
+            9865488328
+        </a>
+
+    </div>
+
+    <div class="contact-item">
+
+        <div class="icon">💬</div>
+
+        <a href="https://wa.me/918122259948">
+            WhatsApp Chat
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

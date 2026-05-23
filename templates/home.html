@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Luxury Car Travels</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#0a0a0a;
+            color:white;
+        }
+
+        /* Navbar */
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:20px 60px;
+            background:rgba(0,0,0,0.7);
+            position:fixed;
+            width:100%;
+            z-index:1000;
+        }
+
+        nav h1{
+            color:gold;
+            font-size:28px;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+        }
+
+        nav ul li{
+            margin:0 20px;
+        }
+
+        nav ul li a{
+            text-decoration:none;
+            color:white;
+            font-size:18px;
+        }
+
+        nav ul li a:hover{
+            color:gold;
+        }
+
+        /* Hero Section */
+        .hero{
+            height:100vh;
+            background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') no-repeat center center/cover;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+        }
+
+        .hero-content{
+            background:rgba(0,0,0,0.6);
+            padding:40px;
+            border-radius:20px;
+        }
+
+        .hero h2{
+            font-size:60px;
+            color:gold;
+        }
+
+        .hero p{
+            font-size:22px;
+            margin-top:20px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:25px;
+            padding:15px 35px;
+            background:gold;
+            color:black;
+            text-decoration:none;
+            font-weight:bold;
+            border-radius:30px;
+        }
+
+        .btn:hover{
+            background:white;
+        }
+
+        /* Services */
+        .services{
+            padding:80px 50px;
+            text-align:center;
+        }
+
+        .services h2{
+            font-size:40px;
+            color:gold;
+            margin-bottom:40px;
+        }
+
+        .service-box{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            flex-wrap:wrap;
+        }
+
+        .card{
+            background:#1a1a1a;
+            width:300px;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0px 0px 15px gold;
+        }
+
+        .card h3{
+            color:gold;
+            margin-bottom:20px;
+        }
+
+        /* Cars Section */
+        .cars{
+            padding:80px 50px;
+            text-align:center;
+        }
+
+        .cars h2{
+            color:gold;
+            font-size:40px;
+            margin-bottom:40px;
+        }
+
+        .car-images{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+        }
+
+        .car-images img{
+            width:300px;
+            height:200px;
+            border-radius:20px;
+        }
+
+        /* Footer */
+        footer{
+            background:black;
+            text-align:center;
+            padding:20px;
+            margin-top:50px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h1>SSS Travels</h1>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+
+
+<li><a href="/booking/">Booking</a></li>
+
+
+<li><a href="/about/">About us</a></li>
+
+<li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Luxury Travel Experience</h2>
+            <p>Book Premium Cars, SUVs, AC/Non-AC Vehicles at Best Price</p>
+            <a href="/booking/" class="btn">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <h2>Why Choose Us?</h2>
+
+        <div class="service-box">
+            <div class="card">
+                <h3>24/7 Service</h3>
+                <p>Available anytime for your travel needs.</p>
+            </div>
+
+            <div class="card">
+                <h3>Luxury Cars</h3>
+                <p>Premium sedans, SUVs, Innova, Tempo Traveller.</p>
+            </div>
+
+            <div class="card">
+                <h3>Affordable Pricing</h3>
+                <p>Best price with maximum comfort.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cars -->
+    <section class="cars">
+        <h2>Our Premium Fleet</h2>
+
+        <div class="car-images">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7">
+            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 SSS Travels | Premium Travel Service</p>
+    </footer>
+
+</body>
+</html>
